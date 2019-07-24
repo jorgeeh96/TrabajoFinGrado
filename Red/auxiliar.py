@@ -339,9 +339,9 @@ class Neural_Network():
 								metrics=['accuracy'])
 		else:
 			self.load()
-		self.model.summary()
+		#self.model.summary()
 
-		plot_model(self.model, to_file='mv8.png')
+		#plot_model(self.model, to_file='m.png')
 
 	def training(self, xtrain, ytrain):
 		self.model.fit(xtrain, ytrain, batch_size=self.batch_size, epochs=self.hmeps)
@@ -354,8 +354,8 @@ class Neural_Network():
 		out = self.model.predict([im.reshape(1,100,120,1), y.reshape(1,2,1), z.reshape(1,1,1), ang.reshape(1,1,1), ang2.reshape(1,2,9,1)])
 		return(out)
 
-	def save(self, model_name='modelo_guay_2.h5'):
+	def save(self, model_name='model.h5'):
 		self.model.save(model_name)
 
-	def load(self, model_name='model_vel.h5'):
+	def load(self, model_name='model.h5'):
 		self.model = tf.keras.models.load_model(model_name)
