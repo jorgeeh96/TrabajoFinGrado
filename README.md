@@ -5,17 +5,17 @@ https://github.com/grvcTeam/grvc-ual
 
 Los cambios necesarios con este proyecto son:
 - Introducir en carpeta ./ual_teleop/scripts 
--
-	./ROS_Files/auto_teleop.py
-	./ROS_Files/auxiliar.py
+ 
+./ROS_Files/auto_teleop.py
+./ROS_Files/auxiliar.py
 
 - Sustituir archivo ./robots_description/urdf/component_snippets.xacro
--
-	./ROS_Files/models/componect_snippets.xacro
+ 
+./ROS_Files/models/componect_snippets.xacro
 
 - Sustituir archivo ./robots_description/models/mbzirc/model.xacro
--
-	./ROS_Files/models/model.xacro
+ 
+./ROS_Files/models/model.xacro
 
 Para el entrenamiento de la red es necesario los archivos en ./Red y los experimentos realizados. Introducir todos los archivos en una carpeta para el entrenamiento.
 
