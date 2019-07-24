@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 import rospy
 import curses
-import time
 import math
-import collections
 from curses import textpad
 from uav_abstraction_layer.srv import TakeOff, Land
 from geometry_msgs.msg import TwistStamped, PoseStamped
@@ -13,7 +11,6 @@ import pygame
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-import time
 from auxiliar import *
 import sys
 
@@ -363,8 +360,6 @@ class MandoVel():
 		else:
 			self.un = np.concatenate([self.deep, self.un[:, :-60],], -1)
 
-
-
 	def execute(self, final_point):
 		rate = rospy.Rate(10)
 		cm = CentroMando()
@@ -494,7 +489,6 @@ class MandoVel():
 				if flag_cmd == True:
 					self.to_cmd = None
 
-				print('{:.3f}\n'.format(self.uav_pose.pose.position.z))
 				self.vel = [0, 0, 0, 0]
 				self.vel[0] = m[2]*math.cos(self.aux_yaw) - m[3]*math.sin(self.aux_yaw)
 				self.vel[1] = m[2]*math.sin(self.aux_yaw) + m[3]*math.cos(self.aux_yaw)

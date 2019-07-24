@@ -1,7 +1,5 @@
 import tensorflow
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import time
 from auxiliar import *
 import warnings
 import os
@@ -23,10 +21,8 @@ test = Dataset()
 set_pvi = []
 for p in dirfolders:
 	set_pose = read_file('./'+p+'/pose.out')[0:-1]
-	if '_J' in p:
-		final_pose=[10.0, 0.0, 0.0, 0.0]
-	else:
-		final_pose = [float(round(item*2)/2) for item in set_pose[-1]]
+	
+	final_pose = [float(round(item*2)/2) for item in set_pose[-1]]
 	set_velocity = read_file('./'+p+'/velocity.out')[0:-1]
 	set_images = get_paths('./'+p+'/Images')[0:-1]
 

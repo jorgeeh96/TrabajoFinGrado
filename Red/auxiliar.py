@@ -65,7 +65,6 @@ def create_samples(a1, x2, y2):
 	else:
 		outs = [0.0, 0.0, 1.0, 0.0, 0.0]
 		b=2
-	#print(d, outs)
 
 	return(outs, b)
 		
@@ -162,7 +161,6 @@ class Step():
 		self.vz, self.nz = self.one_hot_vel(self.velocity[2], 0.1, 0.5)
 
 		self.ngz, self.mrd = self.one_hot_vel(self.velocity[3], 0.05, 0.75)
-		#self.ngz, self.mrd = create_samples(self.pos[-1], self.pos[0], self.pos[1])
 
 		self.aux = [self.nx, self.ny, self.nz, self.mrd]
 
