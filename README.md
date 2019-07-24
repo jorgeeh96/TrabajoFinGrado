@@ -1,4 +1,4 @@
-# TrabajoFinGrado
+# TrabajoFinGrado - Navegación de UAVs con Deep Learning
 
 Este proyecto usa
 https://github.com/grvcTeam/grvc-ual
